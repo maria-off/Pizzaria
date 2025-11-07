@@ -58,12 +58,22 @@
   <div class="login-container">
     <h2>Login do Cliente</h2>
     <form action="home.html" method="post">
-      <input type="text" name="robinho" placeholder="Usuário" required><br>
-      <input type="password" name="1234" placeholder="Senha" required><br>
-      <button onclick="window.location.href='home.html'" type="submit">Entrar</button>
+      <input type="text" id="email" placeholder="Usuário" required><br>
+      <input type="password" id="senha" placeholder="Senha" required><br>
+      <button onclick="logar()" type="submit">Entrar</button>
     </form>
   </div>
 </body>
+<script>
+  function logar(){
+    const email = window.document.querySelector('input#email').value
+    const senha = window.document.querySelector('input#senha').value
+
+    if (email == 'robinho' && senha == '1234'){
+      window.location.href='home.html'
+    }
+  }
+</script>
 </html>
 
 
