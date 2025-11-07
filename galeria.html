@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria - Boa Massa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('unnamed1.png'); /* papel de parede claro */
+      background-size: cover;
+      background-position: center;
+      color: #3a2e22;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.458);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #121212;
+      margin-bottom: 30px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .voltar {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .voltar a {
+      text-decoration: none;
+      background-color: #b22222;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .voltar a:hover {
+      background-color: #8b1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Galeria de Sabores e Momentos 🍕</h2>
+    <div class="galeria">
+      <img src="unnamed6.png" alt="Pizza Calabresa">
+      <img src="unnamed3.png" alt="Evento de aniversário">
+      <img src="unnamed.png" alt="Ambiente da pizzaria">
+      <img src="unnamed7.png" alt="Pizza Quatro Queijos">
+      <img src="unnamed2.png" alt="Rodízio de pizzas">
+      <img src="Copilot_20251107_105309.png" alt="Festa temática">
+    </div>
+
+    <div class="voltar">
+      <a href="home.html">← Voltar para Página Principal</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+	

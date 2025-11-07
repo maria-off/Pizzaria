@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos - Boa Massa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('unnamed1.png'); /* papel de parede claro */
+      background-size: cover;
+      background-position: center;
+      color: #3a2e22;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.244);
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #161515;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: #ffe5d0;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #b22222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8b1a1a;
+    }
+
+    .voltar {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .voltar a {
+      text-decoration: none;
+      background-color: #b22222;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .voltar a:hover {
+      background-color: #8b1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Reserve seu Evento 🎉</h2>
+    <p>Nosso espaço é ideal para:</p>
+    <ul>
+      <li>🎈 Aniversários</li>
+      <li>🎉 Confraternizações</li>
+      <li>🏢 Eventos Corporativos</li>
+      <li>🍕 Festas temáticas com rodízio incluso</li>
+    </ul>
+
+    <form action="confirmacao.html" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="tipo">Tipo de Evento:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">-- Selecione --</option>
+        <option value="aniversario">Aniversário</option>
+        <option value="confraternizacao">Confraternização</option>
+        <option value="corporativo">Evento Corporativo</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="data">Data do Evento:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="pessoas">Número de Pessoas:</label>
+      <input type="number" id="pessoas" name="pessoas" min="1" required>
+
+      <label for="detalhes">Detalhes ou pedidos especiais:</label>
+      <textarea id="detalhes" name="detalhes" rows="4" placeholder="Ex: tema da festa, tipo de decoração, etc."></textarea>
+
+      <button type="submit">Solicitar Reserva</button>
+    </form>
+
+    <div class="voltar">
+      <a href="home.html">← Voltar para Página Principal</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+	

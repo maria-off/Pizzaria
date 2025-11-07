@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedidos - Boa Massa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('unnamed1.png'); /* papel de parede temático */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #d63f2e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a82c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Faça seu Pedido 🍕</h2>
+    <form action="confirmacao.html" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="pizza">Escolha sua pizza:</label>
+      <select id="pizza" name="pizza" required>
+        <option value="">-- Selecione --</option>
+        <option>Calabresa</option>
+        <option>Frango com Catupiry</option>
+        <option>Quatro Queijos</option>
+        <option>Marguerita</option>
+        <option>Portuguesa</option>
+        <option>Chocolate com Morango</option>
+      </select>
+
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4" placeholder="Sem cebola, borda recheada, etc."></textarea>
+
+      <button type="submit">Enviar Pedido</button>
+    </form>
+    <a href="home.html">
+  <button>Voltar para Página Principal</button>
+</a>
+
+  </div>
+</body>
+</html>
+
+
+	
