@@ -6,16 +6,16 @@
   <style>
     body {
       margin: 0;
-      padding:10px;
+      padding: 10px;
       font-family: Arial, sans-serif;
-      background-image: url('unnamed5.png'); /* substitua pelo nome do seu papel de parede */
+      /* É crucial que 'unnamed5.png' esteja na mesma pasta do HTML */
+      background-image: url('unnamed5.png'); 
       background-size: cover;
       background-position: center;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-
     }
 
     .login-container {
@@ -23,30 +23,44 @@
       padding: 30px;
       border-radius: 10px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra um pouco mais forte */
+      max-width: 350px; /* Limita o tamanho para melhor visualização */
+      width: 90%; /* Responsividade básica */
     }
 
     .logo {
       width: 150px;
       margin-bottom: 20px;
+      /* Se você não tiver um logo, remova ou comente esta classe */
+    }
+
+    h2 {
+        color: #b22222; /* Título em cor de pizza/tomate */
+        margin-bottom: 25px;
     }
 
     input[type="text"],
     input[type="password"] {
-      width: 80%;
-      padding: 10px;
+      width: 90%; /* Ajuste para ter um pouco de margem interna */
+      padding: 12px; /* Um pouco mais de padding */
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
+      box-sizing: border-box; /* Garante que padding não aumente o width total */
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #b22222;
+      width: 90%; /* Botão com largura total do container de inputs */
+      padding: 12px 20px;
+      margin-top: 15px; /* Mais espaço acima do botão */
+      background-color: #b22222; /* Vermelho/Tijolo */
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease; /* Transição suave no hover */
     }
 
     button:hover {
@@ -57,24 +71,31 @@
 <body>
   <div class="login-container">
     <h2>Login do Cliente</h2>
-    <form action="home.html" method="post">
-      <input type="text" id="email" placeholder="Usuário" required><br>
+    <form onsubmit="logar(event)">
+      <input type="text" id="usuario" placeholder="Usuário" required><br>
       <input type="password" id="senha" placeholder="Senha" required><br>
-      <button onclick="logar()" type="submit">Entrar</button>
+      <button type="submit">Entrar</button>
     </form>
   </div>
 </body>
 <script>
-  function logar(){
-    const email = window.document.querySelector('input#email').value
-    const senha = window.document.querySelector('input#senha').value
+  // A função agora recebe o objeto 'event' como argumento
+  function logar(event){
+    // 1. Previne o comportamento padrão do formulário (evita o envio/refresh imediato)
+    event.preventDefault(); 
 
-    if (email == 'robinho' && senha == '1234'){
-      window.location.href='home.html'
+    // 2. Captura os valores dos inputs
+    const usuario = window.document.querySelector('input#usuario').value;
+    const senha = window.document.querySelector('input#senha').value;
+    
+    // 3. Verifica as credenciais
+    if (usuario === 'robinho' && senha === '1234'){
+      // Credenciais corretas: Redireciona
+      window.location.href = 'home.html';
+    } else {
+      // Credenciais incorretas: Exibe um alerta e NÃO redireciona
+      alert('Usuário ou senha incorretos. Tente novamente.');
     }
   }
 </script>
 </html>
-
-
-	
