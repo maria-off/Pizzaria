@@ -89,7 +89,7 @@
     const senha = window.document.querySelector('input#senha').value;
     
     // 3. Verifica as credenciais
-    if (usuario === 'robinho' && senha === '1234'){
+    if (usuario === 'robinho' && senha === '1234' || usuario === 'adimim' && senha != ''){
       // Credenciais corretas: Redireciona
       window.location.href = 'home.html';
     } else {
@@ -99,3 +99,4 @@
   }
 </script>
 </html>
+
